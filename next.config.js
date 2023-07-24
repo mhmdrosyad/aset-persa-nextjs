@@ -3,4 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  ...nextConfig,
+  env: {
+    API_ENDPOINT: 'https://rosyad-express.vercel.app/api/graphql'
+  }
+}

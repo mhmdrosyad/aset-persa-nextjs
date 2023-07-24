@@ -51,7 +51,7 @@ const ListClient = () => {
     }
 
     const handleDone = async (id) => {
-            const endpoint = 'http://localhost:5000/api';
+            const endpoint = process.env.API_ENDPOINT;
             const mutation = `
                 mutation resolved($id: ID!) {
                     resolved(id: $id) {
@@ -104,7 +104,7 @@ const ListClient = () => {
 
     useEffect(() => {
         async function getAsets() {
-            const endpoint = 'http://localhost:5000/api';
+            const endpoint = process.env.API_ENDPOINT;
             const query = `
                 query {
                     getRents {

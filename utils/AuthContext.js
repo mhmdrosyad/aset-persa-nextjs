@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     
     const isTokenValid = async (token) => {
         try {
-            const endpoint = 'http://localhost:5000/user';
+            const endpoint = process.env.API_ENDPOINT;
             const mutation = `
                 mutation CheckToken($token: String!) {
                   checkToken(token: $token)

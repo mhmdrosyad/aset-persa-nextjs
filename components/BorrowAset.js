@@ -57,7 +57,7 @@ const BorrowAset = () => {
             return errors;
         },
         onSubmit: async (values) => {
-            const endpoint = 'http://localhost:5000/api';
+            const endpoint = process.env.API_ENDPOINT;
             const mutation = `
                 mutation NewRent($nama: String!, $identitas: String!, $nomor: String!, $alamat: String!, $wa: String!, $aset: String!, $jumlah: Int!, $keperluan: String!, $kenalan: String!, $tglPinjam: String!, $tglKembali: String!, $note: String!, $done: Boolean!) {
                     newRent(input:{nama: $nama, identitas: $identitas, nomor: $nomor, alamat: $alamat, wa: $wa, aset: $aset, jumlah: $jumlah, keperluan: $keperluan, kenalan: $kenalan, tglPinjam: $tglPinjam, tglKembali: $tglKembali, note: $note, done: $done}) {

@@ -57,7 +57,7 @@ const EditAsetForm = (props) => {
                   .replace(/ +/g, "-");
               }
             const slug = convertToSlug(values.nama);
-            const endpoint = 'http://localhost:5000/api';
+            const endpoint = process.env.API_ENDPOINT;
             const mutation = `
                 mutation UpdateAset($id: ID!, $slug: String!, $nama: String!, $urlImg: String!, $stock: Int!, $note: String!, $price: String!) {
                     updateAset(id: $id, input:{slug: $slug, nama: $nama, urlImg: $urlImg, stock: $stock, note: $note, price: $price}) {

@@ -34,7 +34,7 @@ const loginForm = () => {
         },
         onSubmit: async (values) => {
             try {
-                const endpoint = 'http://localhost:5000/user';
+                const endpoint = process.env.API_ENDPOINT;
                 const mutation = `
                     mutation Login($username: String!, $password: String!) {
                         login(username: $username, password: $password) {

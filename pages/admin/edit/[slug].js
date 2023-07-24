@@ -16,7 +16,7 @@ const EditPage = () => {
 
     useEffect(() => {
         async function getSingleAset() {
-            const endpoint = 'http://localhost:5000/api';
+            const endpoint = process.env.API_ENDPOINT;
             const mutation = `
                 query GetAset ($slug: String!) {
                     getAset (slug: $slug) {
