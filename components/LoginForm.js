@@ -22,7 +22,7 @@ const InfoWrapper = (props) => {
     return <></>;
 }
 
-const loginForm = () => {
+const LoginForm = () => {
     const { login } = useContext(AuthContext);
     const [isSuccess, setIsSuccess] = useState(null);
     const router = useRouter();
@@ -97,4 +97,4 @@ const loginForm = () => {
     )
 }
 
-export default loginForm;
+export default LoginForm;

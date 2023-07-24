@@ -8,10 +8,10 @@ const Header = () => {
             <div className="bg-white">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center py-5 md:px-8 md:justify-between md:space-x-3 gap-4">
                     <div className="flex flex-col md:flex-row items-center gap-3 md:gap-16">
-                        <a href="/" className="me-1 flex items-center">
+                        <Link href="/" className="me-1 flex items-center">
                         <FontAwesomeIcon className="me-2" icon={faBolt} size="lg" style={{color: "#FDE047"}} />
                             <h1 className="text-xl font-semibold">ASET PERSA</h1>
-                        </a>
+                        </Link>
                         <ul className="flex gap-8 text-neutral-600">
                             <li><Link href='/'>HOME</Link></li>
                             <li><Link href='/'>ABOUT</Link></li>
