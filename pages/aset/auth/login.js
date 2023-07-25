@@ -1,4 +1,4 @@
-import LoginForm from "@/components/LoginForm";
+import LoginForm from "@/components/aset/LoginForm";
 import Head from "next/head";
 import { useContext } from "react";
 import AuthContext from "@/utils/AuthContext";
@@ -11,14 +11,14 @@ const Add = () => {
     const router = useRouter();
     const { isLoggedIn } = useContext(AuthContext);
     if(isLoggedIn) {
-        router.push('/admin')
+        router.push('/aset/admin')
     }
 
     return (
         <div className={`text-gray-600 flex flex-col items-center justify-center m-4 ${montserrat.className}`}>
             <Head><title>Login</title></Head>
             {isLoggedIn ? (<div>Anda sudah login</div>) : (<LoginForm />) }
-            <p className="text-center mt-12 flex">COPYRIGHT &copy; 2023 &nbsp;<Link href='/'>PERSA</Link></p>
+            <p className="text-center mt-12 flex">COPYRIGHT &copy; 2023 &nbsp;<Link href='/aset'>PERSA</Link></p>
         </div>
     )
 }

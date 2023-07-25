@@ -1,15 +1,15 @@
-import AddAsetForm from "@/components/AddAsetForm";
+import BorrowAset from "@/components/aset/BorrowAset";
 import Head from "next/head";
 
 const Add = () => {
     return (
         <>
             <Head>
-                <title>Tambah Aset</title>
+                <title>Pinjam Aset</title>
             </Head>
             
             <div className="flex flex-col items-center justify-center m-4">
-                <AddAsetForm />
+                <BorrowAset />
             </div>
         </>
     )

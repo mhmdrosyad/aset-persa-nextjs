@@ -3,7 +3,7 @@ import { GraphQLClient } from "graphql-request";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenSquare } from "@fortawesome/free-solid-svg-icons";
-import Pagination from "../Pagination";
+import Pagination from "../aset/Pagination";
 
 const ListAset = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -65,7 +65,7 @@ const ListAset = () => {
                                     
                                     
                                     <div className="lg:ms-auto">
-                                        <Link className="px-4 py-2 ease-linear duration-200 bg-yellow-300 hover:bg-yellow-400 rounded font-semibold text-center" href={`/admin/edit/${aset.slug}`}>
+                                        <Link className="px-4 py-2 ease-linear duration-200 bg-yellow-300 hover:bg-yellow-400 rounded font-semibold text-center" href={`/aset/admin/edit/${aset.slug}`}>
                                         <FontAwesomeIcon icon={faPenSquare} />
                                             <span className="ms-2 hidden">EDIT</span>
                                         </Link>

@@ -1,6 +1,5 @@
-import Footer from "./Footer";
 import { Montserrat } from 'next/font/google'
-import AdminHeader from "./admin/AdminHeader";
+import AdminHeader from '@/components/admin/AdminHeader'
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 import AuthContext from "@/utils/AuthContext";
@@ -17,7 +16,7 @@ const AdminLayout = ({ children }) => {
       }
 
       if (!isLoggedIn) {
-        router.push('/auth/login');
+        router.push('/aset/auth/login');
         return null;
       }
     return (

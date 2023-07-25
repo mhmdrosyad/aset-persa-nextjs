@@ -5,7 +5,7 @@ import { GraphQLClient } from "graphql-request";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-import DetailAsetComponent from "@/components/DetailAsetComponent";
+import DetailAsetComponent from "@/components/aset/DetailAsetComponent";
 import Head from 'next/head';
 
 

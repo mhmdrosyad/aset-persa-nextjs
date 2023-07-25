@@ -3,7 +3,7 @@ import { GraphQLClient } from "graphql-request";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faPenSquare, faPrint, faTrashAlt, faUndo } from "@fortawesome/free-solid-svg-icons";
-import Pagination from "../Pagination";
+import Pagination from "../aset/Pagination";
 import html2canvas from "html2canvas";
 
 const ListClient = () => {

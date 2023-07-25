@@ -11,6 +11,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'intro-persa': "url('/img/bg-intro.jpg')",
       },
       borderRadius: {
         'lg' : '1.5rem',
