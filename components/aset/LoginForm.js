@@ -53,7 +53,7 @@ const LoginForm = () => {
                 sessionStorage.setItem('token', tokenid);
                 sessionStorage.setItem('username', data.login.user.username);
                 setIsSuccess(true);
-                router.push('/admin');
+                router.push('/aset/admin');
             } catch (error) {
                 setIsSuccess(false)
                 console.log(error.response.errors[0].message)
