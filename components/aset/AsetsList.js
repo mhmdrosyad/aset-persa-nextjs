@@ -67,7 +67,7 @@ const AsetsList = () => {
                                     </h3>
                                     <p className="text-red-600 text-2xl font-semibold">Rp. {aset.price}</p>
                                     <div className="mt-3 sm:mt-auto">
-                                        <Link className="px-4 py-2 ease-linear duration-200 bg-yellow-300 hover:bg-yellow-400 rounded font-semibold text-center" href={`/aset/aset/${aset.slug}`}>
+                                        <Link className="px-4 py-2 ease-linear duration-200 bg-yellow-300 hover:bg-yellow-400 rounded font-semibold text-center" href={`/aset/detail/${aset.slug}`}>
                                             <FontAwesomeIcon icon={faInfoCircle} /> &nbsp;
                                             DETAIL
                                         </Link>

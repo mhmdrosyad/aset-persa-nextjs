@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
         </AdminLayout>
       ) : router.pathname === '/aset/auth/login' ? (
           <Component {...pageProps} />
-      ) : router.pathname === '/aset' ? (
+      ) : router.pathname.startsWith('/aset') ? (
         <Layout>
           <Component {...pageProps} />
         </Layout>
