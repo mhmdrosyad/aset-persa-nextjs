@@ -39,7 +39,7 @@ const KabidSection = () => {
                 <h2 className="md:text-3xl">KETUA BIDANG KERJA <span className="font-bold">PERSA</span></h2>
                 <p>Di bawah ketua umum terdapat 5 ketua bidang dengan fokus berbeda-beda.</p>
                 <div className="grid lg:grid-cols-5 gap-6">
-                    <CardKabid src="/img/julang.jpg" bidang="Pengembangan Sumberdaya Manusia" nama="Julang Angkoso" />
+                    <CardKabid src="/img/julang.JPG" bidang="Pengembangan Sumberdaya Manusia" nama="Julang Angkoso" />
                     <CardKabid src="/img/qila.JPG" bidang="Kreasi Masyarakat" nama="Aqila Janitra" />
                     <CardKabid src="/img/tama.JPG" bidang="Aset dan Infrastruktur" nama="Khodri A. Pratama" />
                     <CardKabid src="/img/feri.JPG" bidang="Publikasi Dokumentasi dan Jaringan" nama="Fery Irawan" />
