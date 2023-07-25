@@ -4,7 +4,7 @@ import AsetsList from '@/components/aset/AsetsList'
 export default function Home() {
   return (
     <>
-      <Head><title>PERSA SAMBIREJO</title></Head>
+      <Head><title>ASET PERSA</title></Head>
       <AsetsList />
     </>
   )
