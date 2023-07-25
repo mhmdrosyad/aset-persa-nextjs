@@ -5,7 +5,7 @@ import { GraphQLClient } from "graphql-request";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-import EditAsetForm from "@/components/EditAsetForm";
+import EditAsetForm from "@/components/aset/EditAsetForm";
 import Head from 'next/head';
 
 const EditPage = () => {
