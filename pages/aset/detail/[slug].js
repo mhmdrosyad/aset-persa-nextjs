@@ -7,7 +7,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import DetailAsetComponent from "@/components/aset/DetailAsetComponent";
 import Head from 'next/head';
-
+import SkeletonLoading from "@/components/aset/SkeletonLoading";
 
 const DetailPage = () => {
     const [aset, setAset] = useState(null);
@@ -35,11 +35,12 @@ const DetailPage = () => {
             const data = await client.request(mutation, variabels);
             setAset(data.getAset);
         }
-
-        getSingleAset();
-    }, [])
-
-    if (!aset) return null;
+        if(slug){
+            getSingleAset();
+        }
+    }, [slug])
+    
+    if (!aset) return <SkeletonLoading />;
 
     return (
         <>
@@ -48,7 +49,7 @@ const DetailPage = () => {
             </Head>
             <div className="bg-white px-10 py-6  shadow rounded-lg flex flex-col items-center justify-center my-8">
                 <div className="flex w-full justify-between items-center">
-                    <Link href="/" className="text-lg font-semibold text-red-600">
+                    <Link href="/aset" className="text-lg font-semibold text-red-600">
                         <FontAwesomeIcon icon={faArrowLeft} /> &nbsp;{" "}
                         <span>Back</span>
                     </Link>

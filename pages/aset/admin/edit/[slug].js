@@ -46,7 +46,7 @@ const EditPage = () => {
             <Head>
                 <title>{aset.nama}</title>
             </Head>
-            <div className="flex flex-col items-center justify-center m-4 bg-white rounded-lg p-12 mt-12 shadow">
+            <div className="flex flex-col items-center justify-center m-4 bg-white rounded lg:rounded-lg p-6 lg:p-12 mt-12 shadow">
                     <div className="text-lg font-semibold me-auto text-red-600">
                         <Link href="/admin/our-aset"><FontAwesomeIcon className="me-2" icon={faArrowLeft} />Back</Link>
                     </div>

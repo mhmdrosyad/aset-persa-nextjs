@@ -89,7 +89,7 @@ const BorrowAset = () => {
     return (
         <>
             <InfoWrapper status={isSuccess} />
-            <form className="flex flex-col w-4/5 bg-white px-12 py-6 rounded-lg shadow-sm" onSubmit={formik.handleSubmit}>
+            <form className="flex flex-col w-full lg:w-4/5 bg-white px-6 lg:px-12 py-6 rounded lg:rounded-lg shadow-sm" onSubmit={formik.handleSubmit}>
                 <h1 className="relative mb-3 text-2xl font-bold text-center">
                     PINJAM ASET
                 </h1>
@@ -108,9 +108,9 @@ const BorrowAset = () => {
                     </div>
                     <div className="flex flex-col my-3">
                         <div>Identitas Peminjam</div>
-                        <div className="flex">
+                        <div className="flex flex-col lg:flex-row">
                             <select onChange={formik.handleChange}
-                        value={formik.values.identitas} name="identitas" className="me-3 my-3 p-3 bg-neutral-100 font-semibold focus:outline-none focus:ring focus:border-blue-300">
+                        value={formik.values.identitas} name="identitas" className="lg:me-3 my-3 p-3 bg-neutral-100 font-semibold focus:outline-none focus:ring focus:border-blue-300">
                                 <option value="" disabled>Pilih identitas</option>
                                 <option value="ktp">KTP</option>
                                 <option value="ktm">KTM</option>
@@ -154,8 +154,8 @@ const BorrowAset = () => {
                     </div>
 
                     <div className="flex flex-col my-3">
-                        <div className="flex items-center">
-                            <div className="flex flex-col me-3 flex-1">
+                        <div className="flex flex-col lg:flex-row items-center">
+                            <div className="flex flex-col lg:me-3 w-full">
                                 <div>Alat yang Dipinjam <span className="font-semibold text-red-600"> *</span></div>
                                 <select onChange={formik.handleChange}
                         value={formik.values.aset} name="aset" className="my-3 p-3 bg-neutral-100 font-semibold w-full focus:outline-none focus:ring focus:border-blue-300">
@@ -166,7 +166,7 @@ const BorrowAset = () => {
                                     <option value="hand tacker">Handtacker</option>
                                 </select>
                             </div>
-                            <div className="flex flex-col">
+                            <div className="flex flex-col w-full lg:w-fit">
                             <div>Jumlah <span className="font-semibold text-red-600"> *</span></div>
                                 <input
                                     className="my-3 p-3 bg-neutral-100 font-semibold focus:outline-none focus:ring focus:border-blue-300"
@@ -203,8 +203,8 @@ const BorrowAset = () => {
                             value={formik.values.kenalan}
                         ></input>
                     </div>
-                    <div className="flex my-3">
-                        <div className="flex flex-col me-3 flex-1">
+                    <div className="flex flex-col lg:flex-row my-3">
+                        <div className="flex flex-col lg:me-3 flex-1">
                             <div>Tanggal Pinjam <span className="font-semibold text-red-600"> *</span></div>
                             <input
                                 className="my-3 p-3 bg-neutral-100 font-semibold w-full focus:outline-none focus:ring focus:border-blue-300"
@@ -237,7 +237,7 @@ const BorrowAset = () => {
                     </div>
                 </div>
                 <div className="flex justify-end">
-                    <button className="bg-yellow-300 text-base p-3 rounded-md" type="submit">
+                    <button className="flex-1 lg:flex-none bg-yellow-300 text-base p-3 rounded-md" type="submit">
                         <FontAwesomeIcon icon={faSave} /> &nbsp; PINJAM
                     </button>
                 </div>

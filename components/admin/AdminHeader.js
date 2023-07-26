@@ -46,18 +46,19 @@ const AdminHeader = () => {
                                 <h1 className="font-semibold text-xl">ADMIN ASET PERSA</h1>
                             </Link>
                         </div>
-                        <div className="flex flex-col gap-3 text-gray-500">
+                        <div className="flex flex-col gap-6 text-gray-500">
                             <Link className="font-semibold flex gap-4 items-center" href='/aset/admin'><FontAwesomeIcon className="w-6 h-6" icon={faHome} />Home</Link>
-                            <Link className="font-semibold flex gap-4" href='/aset/admin'><FontAwesomeIcon className="w-6 h-6" icon={faToolbox} />List Aset</Link>
+                            <Link className="font-semibold flex gap-4" href='/aset/admin/our-aset'><FontAwesomeIcon className="w-6 h-6" icon={faToolbox} />List Aset</Link>
                             <Link className="font-semibold flex gap-4" href='/aset/admin/add'><FontAwesomeIcon className="w-6 h-6" icon={faPlusSquare} />Tambah Aset</Link>
-                            <Link className="font-semibold flex gap-4" href='/aset/admin'><FontAwesomeIcon className="w-6 h-6" icon={faFileSignature} />Pinjam Aset</Link>
+                            <Link className="font-semibold flex gap-4" href='/aset/admin/pinjam'><FontAwesomeIcon className="w-6 h-6" icon={faFileSignature} />Pinjam Aset</Link>
+                            <Link className="font-semibold flex gap-4" href='/aset/admin/peminjam'><FontAwesomeIcon className="w-6 h-6" icon={faUsers} />Peminjam</Link>
                         </div>
                         <button onClick={backto} className="font-semibold mt-auto flex gap-2 items-center"><FontAwesomeIcon icon={faExternalLinkAlt} />Web Aset</button>
                         <button onClick={logout} className="font-semibold mt-3 flex gap-2 items-center text-red-600"><FontAwesomeIcon icon={faSignOutAlt} />Logout</button>
                     </div>
                 </div>
             )}
-            <div className="lg:hidden z-10 fixed bottom-0 w-full py-5 px-2 bg-white rounded-t-lg">
+            <div className="lg:hidden shadow z-10 fixed bottom-0 w-full py-5 px-2 bg-white rounded-t-lg">
                 <div className="flex gap-16 items-center justify-center text-xl">
                     <Link href='/aset/admin'><FontAwesomeIcon size='lg' icon={faHome} /></Link>
                     <Link href='/aset/admin'><FontAwesomeIcon size='lg' icon={faToolbox} /></Link>

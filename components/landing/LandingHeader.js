@@ -14,10 +14,6 @@ const LandingHeader = () => {
                             <li><Link href='/aset'>ASET PERSA</Link></li>
                         </ul>
                     </div>
-                    <Link className='hidden sm:flex bg-red-600 hover:bg-red-700 text-white font-semibold flex gap-3 rounded-full py-2 px-6 items-center' href='/aset'>
-                            <FontAwesomeIcon icon={faUser} />
-                            LOGIN
-                    </Link>
                 </div>
             </div>
         </>

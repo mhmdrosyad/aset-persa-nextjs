@@ -139,7 +139,8 @@ const ListClient = () => {
             <div className="flex flex-col w-full">
                 <div className="my-3 w-full flex flex-col">
                 <h2 className="text-2xl my-5 font-bold">LIST PEMINJAM ASET</h2>
-                <table className="table-fixed rounded overflow-hidden shadow">
+                <div className="overflow-y-auto">
+                <table className="table-fixed lg:w-full rounded overflow-hidden shadow">
                     <thead>
                         <tr className="bg-gray-600 text-white">
                             <th className="p-4">Nama Peminjam</th>
@@ -167,6 +168,7 @@ const ListClient = () => {
                     }
                     </tbody>
                 </table>
+                </div>
                 {totalItems <= itemPerPage ? (<></>) : (<Pagination
                     currentPage={currentPage}
                     totalPages={totalPages}
@@ -175,7 +177,8 @@ const ListClient = () => {
                 </div>
                 <div className="my-3 w-full flex flex-col">
                 <h2 className="text-2xl my-5 font-bold">HISTORI PEMINJAM ASET</h2>
-                <table className="md:table-fixed table-auto rounded overflow-hidden shadow">
+                <div className="overflow-y-auto">
+                <table className="md:table-fixed lg:w-full table-auto rounded overflow-hidden shadow">
                     <thead>
                         <tr className="bg-gray-600 text-white">
                             <th className="p-4">Nama Peminjam</th>
@@ -205,15 +208,16 @@ const ListClient = () => {
                     </tbody>
                 </table>
                 </div>
+                </div>
                 {selectedAset && (
                         <div className="flex justify-center items-center">
                             <div onClick={handleCloseOverlay} className="bg-black w-full h-full fixed opacity-20 top-0 left-0 z-20 "></div>
-                        <div className="absolute bg-gray-100 px-8 py-16 z-30 h-4/5 mt-10 rounded top-0">
+                        <div className="absolute bg-gray-100 px-3 sm:px-8 py-16 z-30 h-4/5 mt-10 rounded top-0">
                             <div className="absolute top-3 right-3 flex justify-end">
                             <button className="bg-red-500 text-white h-8 w-8 rounded-full font-bold" onClick={handleCloseOverlay}>X</button>
                             </div>
                             <div className="overflow-y-scroll h-full p-3">
-                                <div id="eRender" className="bg-white px-12 py-10">
+                                <div id="eRender" className="bg-white px-6 sm:px-12 py-6 sm:py-10">
                                     <div className="flex flex-col items-center py-6">
                                         <h1 className="text-2xl font-bold py-2">ASET PERSA</h1>
                                         <p>Sambirejo, Wedomartani, Ngemplak, Sleman, Daerah Istimewa Yogyakarta</p>
@@ -222,44 +226,44 @@ const ListClient = () => {
                                     <table className="table-fixed my-3">
                                         <tbody>
                                             <tr>
-                                                <td className="p-3">Nama</td>
-                                                <td className="p-3">:</td>
-                                                <td className="p-3">{selectedAset.nama}</td>
+                                                <td className="p-2 sm:p-3">Nama</td>
+                                                <td className="p-2 sm:p-3">:</td>
+                                                <td className="p-2 sm:p-3">{selectedAset.nama}</td>
                                             </tr>
                                             <tr>
-                                                <td className="p-3">Alamat</td>
-                                                <td className="p-3">:</td>
-                                                <td className="p-3">{selectedAset.alamat}</td>
+                                                <td className="p-2 sm:p-3">Alamat</td>
+                                                <td className="p-2 sm:p-3">:</td>
+                                                <td className="p-2 sm:p-3">{selectedAset.alamat}</td>
                                             </tr>
                                             <tr>
-                                                <td className="p-3">No. WA</td>
-                                                <td className="p-3">:</td>
-                                                <td className="p-3">{selectedAset.wa}</td>
+                                                <td className="p-2 sm:p-3">No. WA</td>
+                                                <td className="p-2 sm:p-3">:</td>
+                                                <td className="p-2 sm:p-3">{selectedAset.wa}</td>
                                             </tr>
                                             <tr>
-                                                <td className="p-3">Barang yang Dipinjam</td>
-                                                <td className="p-3">:</td>
-                                                <td className="p-3">{selectedAset.aset}</td>
+                                                <td className="p-2 sm:p-3">Barang yang Dipinjam</td>
+                                                <td className="p-2 sm:p-3">:</td>
+                                                <td className="p-2 sm:p-3">{selectedAset.aset}</td>
                                             </tr>
                                             <tr>
-                                                <td className="p-3">Tanggal Pinjam</td>
-                                                <td className="p-3">:</td>
-                                                <td className="p-3">{selectedAset.tglPinjam}</td>
+                                                <td className="p-2 sm:p-3">Tanggal Pinjam</td>
+                                                <td className="p-2 sm:p-3">:</td>
+                                                <td className="p-2 sm:p-3">{selectedAset.tglPinjam}</td>
                                             </tr>
                                             <tr>
-                                                <td className="p-3">Rencana Pengembalian</td>
-                                                <td className="p-3">:</td>
-                                                <td className="p-3">{selectedAset.tglKembali}</td>
+                                                <td className="p-2 sm:p-3">Rencana Pengembalian</td>
+                                                <td className="p-2 sm:p-3">:</td>
+                                                <td className="p-2 sm:p-3">{selectedAset.tglKembali}</td>
                                             </tr>
                                             <tr>
-                                                <td className="p-3">Jaminan</td>
-                                                <td className="p-3">:</td>
-                                                <td className="p-3">{selectedAset.identitas}</td>
+                                                <td className="p-2 sm:p-3">Jaminan</td>
+                                                <td className="p-2 sm:p-3">:</td>
+                                                <td className="p-2 sm:p-3">{selectedAset.identitas}</td>
                                             </tr>
                                             <tr>
-                                                <td className="p-3">Note</td>
-                                                <td className="p-3">:</td>
-                                                <td className="p-3">{selectedAset.note}</td>
+                                                <td className="p-2 sm:p-3">Note</td>
+                                                <td className="p-2 sm:p-3">:</td>
+                                                <td className="p-2 sm:p-3">{selectedAset.note}</td>
                                             </tr>
                                         </tbody>
                                     </table>

@@ -64,11 +64,11 @@ const LoginForm = () => {
     return (
         <>
             <InfoWrapper status={isSuccess} />
-            <form className="shadow mt-8 bg-white px-8 sm:px-20 pb-24 py-16 rounded-lg flex flex-col" onSubmit={formik.handleSubmit}>
+            <form className="shadow mt-8 bg-white px-8 sm:px-20 py-12 sm:pb-24 sm:py-16 rounded-lg flex flex-col" onSubmit={formik.handleSubmit}>
                 <div className="flex flex-col">
                     <div className="flex flex-col items-center">
                         <span className="text-yellow-400 text-3xl"><FontAwesomeIcon size="lg" icon={faBolt} /></span>
-                        <h2 className="text-center text-2xl font-semibold my-4">LOGIN ASET PERSA</h2>
+                        <h2 className="text-center text-xl sm:text-2xl font-semibold my-4">LOGIN ASET PERSA</h2>
                     </div>
                     <input
                         className="md:w-96 rounded border border-grey-300 mt-4 p-3 w-full focus:outline-none focus:border-blue-300"

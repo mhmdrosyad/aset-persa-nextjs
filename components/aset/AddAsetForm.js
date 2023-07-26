@@ -79,13 +79,13 @@ const AddAsetForm = () => {
     return (
         <>
             <InfoWrapper status={isSuccess} />
-            <form className="flex flex-col w-4/5 bg-white px-12 py-6 rounded-lg shadow-sm" onSubmit={formik.handleSubmit}>
+            <form className="flex flex-col w-full lg:w-4/5 bg-white px-6 lg:px-12 py-6 rounded lg:rounded-lg shadow-sm" onSubmit={formik.handleSubmit}>
                 <h1 className="relative mb-3 text-2xl font-bold text-center">
                     TAMBAH ASET
                 </h1>
                 <div className="flex flex-col">
                     <input
-                        className="my-3 p-3 text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
+                        className="my-3 p-3 lg:text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
                         type="text"
                         name="nama"
                         placeholder="nama aset"
@@ -94,7 +94,7 @@ const AddAsetForm = () => {
                     ></input>
                     {formik.errors.nama && <div className="text-red-600 text-xs">{formik.errors.nama}</div>}
                     <input
-                        className="my-3 p-3 text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
+                        className="my-3 p-3 lg:text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
                         type="text"
                         name="urlImg"
                         placeholder="URL gambar"
@@ -103,14 +103,14 @@ const AddAsetForm = () => {
                     ></input>
                     {formik.errors.urlImg && <div className="text-red-600 text-xs">{formik.errors.urlImg}</div>}
                     <input
-                        className="my-3 p-3 text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
+                        className="my-3 p-3 lg:text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
                         type="number"
                         name="stock"
                         onChange={formik.handleChange}
                         value={formik.values.stock}
                     ></input>
                     <input
-                        className="my-3 p-3 text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
+                        className="my-3 p-3 lg:text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
                         type="text"
                         name="price"
                         placeholder="harga sewa"
@@ -119,7 +119,7 @@ const AddAsetForm = () => {
                     ></input>
                     {formik.errors.price && <div className="text-red-600 text-xs">{formik.errors.price}</div>}
                     <textarea
-                        className="my-3 p-3 text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
+                        className="my-3 p-3 lg:text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
                         name="note"
                         placeholder="keterangan tambahan"
                         onChange={formik.handleChange}
@@ -127,7 +127,7 @@ const AddAsetForm = () => {
                     ></textarea>
                 </div>
                 <div className="flex justify-end">
-                    <button className="bg-yellow-300 text-base p-3 rounded-md" type="submit">
+                    <button className="flex-1 lg:flex-none bg-yellow-300 text-base p-3 rounded-md" type="submit">
                         <FontAwesomeIcon icon={faSave} /> &nbsp; Tambah
                     </button>
                 </div>

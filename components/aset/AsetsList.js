@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import Pagination from "./Pagination";
+import SkeletonLoading from "./SkeletonLoading";
 
 const AsetsList = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -49,6 +50,16 @@ const AsetsList = () => {
         }
         getAsets();
     }, [])
+
+    if (!currentData) {
+        return (
+        <div>
+            <SkeletonLoading />
+            <SkeletonLoading />
+            <SkeletonLoading />
+        </div>
+        );
+    }
 
     return (
             <div className="flex flex-col gap-6 my-8 overflow-y-auto">

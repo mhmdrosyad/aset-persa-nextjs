@@ -96,10 +96,10 @@ const EditAsetForm = (props) => {
     return (
         <>
             <InfoWrapper status={isSuccess} />
-            <form className="flex flex-col w-4/5" onSubmit={formik.handleSubmit}>
+            <form className="flex flex-col w-full lg:w-4/5" onSubmit={formik.handleSubmit}>
                 <div className="flex flex-col">
                     <input
-                        className="my-3 p-3 text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
+                        className="my-3 p-3 lg:text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
                         type="text"
                         name="nama"
                         placeholder="nama aset"
@@ -108,7 +108,7 @@ const EditAsetForm = (props) => {
                     ></input>
                     {formik.errors.nama && <div className="text-red-600 text-xs">{formik.errors.nama}</div>}
                     <input
-                        className="my-3 p-3 text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
+                        className="my-3 p-3 lg:text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
                         type="text"
                         name="urlImg"
                         placeholder="URL gambar"
@@ -118,14 +118,14 @@ const EditAsetForm = (props) => {
                     {formik.errors.urlImg && <div className="text-red-600 text-xs">{formik.errors.urlImg}</div>}
 
                     <input
-                        className="my-3 p-3 text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
+                        className="my-3 p-3 lg:text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
                         type="number"
                         name="stock"
                         onChange={formik.handleChange}
                         value={formik.values.stock}
                     ></input>
                     <input
-                        className="my-3 p-3 text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
+                        className="my-3 p-3 lg:text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
                         type="text"
                         name="price"
                         placeholder="harga"
@@ -134,18 +134,18 @@ const EditAsetForm = (props) => {
                     ></input>
                     {formik.errors.price && <div className="text-red-600 text-xs">{formik.errors.price}</div>}
                     <textarea
-                        className="my-3 p-3 text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
+                        className="my-3 p-3 lg:text-xl bg-neutral-100 font-bold w-full focus:outline-none focus:ring focus:border-blue-300"
                         name="note"
                         placeholder="keterangan tambahan"
                         onChange={formik.handleChange}
                         value={formik.values.note}
                     ></textarea>
                 </div>
-                <div className="flex justify-end">
-                    <button className="bg-purple-700 text-white text-base m-2 p-3 border rounded-md" type="submit">
+                <div className="flex lg:justify-end ">
+                    <button className="flex-1 lg:flex-none bg-purple-700 text-white text-base lg:m-2 p-3 border rounded-md" type="submit">
                         <FontAwesomeIcon icon={faSave} /> &nbsp; Simpan
                     </button>
-                    <button className="bg-red-500 text-white text-base m-2 me-0 p-3 border rounded-md" onClick={handleDelete}>
+                    <button className="flex-1 lg:flex-none bg-red-500 text-white text-base ms-2 lg:m-2 lg:me-0 p-3 border rounded-md" onClick={handleDelete}>
                         <FontAwesomeIcon icon={faTrashAlt} /> &nbsp; Delete
                     </button>
                 </div>

@@ -7,9 +7,9 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 const Intro = () => {
 
     return (
-        <div className="bg-intro-persa w-full h-screen bg-cover bg-center lg:bg-top">
-            <div className="bg-gradient-to-t from-black to-gray-600 w-full h-screen opacity-70 flex justify-center items-center">
-                <div className="flex flex-col items-center opacity-100 px-3">
+        <div className="bg-intro-persa w-full sm:h-screen bg-cover bg-center lg:bg-top">
+            <div className="bg-gradient-to-t from-black to-gray-600 w-full sm:h-screen opacity-70 flex justify-center items-center">
+                <div className="flex flex-col items-center opacity-100 mt-12 px-3">
                     <Image alt="PERSA SAMBIREJO" className="w-48 h-48 lg:w-auto lg:h-auto" src="./logo-persa.svg" width={384} height={384}></Image>
                     <h1 className="text-xl lg:text-3xl my-5 text-white text-center">Hi! Welcome... We Are PERSA Sambirejo.</h1>
                     <div className="my-6 flex gap-6">

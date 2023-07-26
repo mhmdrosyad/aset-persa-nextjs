@@ -50,7 +50,7 @@ const ListAset = () => {
     }, [])
 
     return (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 overflow-y-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 overflow-y-auto w-full">
                 {currentData &&
                     currentData.map((aset) => {
                         return(
