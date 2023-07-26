@@ -47,11 +47,11 @@ const AdminHeader = () => {
                             </Link>
                         </div>
                         <div className="flex flex-col gap-6 text-gray-500">
-                            <Link className="font-semibold flex gap-4 items-center" href='/aset/admin'><FontAwesomeIcon className="w-6 h-6" icon={faHome} />Home</Link>
-                            <Link className="font-semibold flex gap-4" href='/aset/admin/our-aset'><FontAwesomeIcon className="w-6 h-6" icon={faToolbox} />List Aset</Link>
-                            <Link className="font-semibold flex gap-4" href='/aset/admin/add'><FontAwesomeIcon className="w-6 h-6" icon={faPlusSquare} />Tambah Aset</Link>
-                            <Link className="font-semibold flex gap-4" href='/aset/admin/pinjam'><FontAwesomeIcon className="w-6 h-6" icon={faFileSignature} />Pinjam Aset</Link>
-                            <Link className="font-semibold flex gap-4" href='/aset/admin/peminjam'><FontAwesomeIcon className="w-6 h-6" icon={faUsers} />Peminjam</Link>
+                            <Link onClick={handleToogleMenu} className="font-semibold flex gap-4 items-center" href='/aset/admin'><FontAwesomeIcon className="w-6 h-6" icon={faHome} />Home</Link>
+                            <Link onClick={handleToogleMenu} className="font-semibold flex gap-4" href='/aset/admin/our-aset'><FontAwesomeIcon className="w-6 h-6" icon={faToolbox} />List Aset</Link>
+                            <Link onClick={handleToogleMenu} className="font-semibold flex gap-4" href='/aset/admin/add'><FontAwesomeIcon className="w-6 h-6" icon={faPlusSquare} />Tambah Aset</Link>
+                            <Link onClick={handleToogleMenu} className="font-semibold flex gap-4" href='/aset/admin/pinjam'><FontAwesomeIcon className="w-6 h-6" icon={faFileSignature} />Pinjam Aset</Link>
+                            <Link onClick={handleToogleMenu} className="font-semibold flex gap-4" href='/aset/admin/peminjam'><FontAwesomeIcon className="w-6 h-6" icon={faUsers} />Peminjam</Link>
                         </div>
                         <button onClick={backto} className="font-semibold mt-auto flex gap-2 items-center"><FontAwesomeIcon icon={faExternalLinkAlt} />Web Aset</button>
                         <button onClick={logout} className="font-semibold mt-3 flex gap-2 items-center text-red-600"><FontAwesomeIcon icon={faSignOutAlt} />Logout</button>

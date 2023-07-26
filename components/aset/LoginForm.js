@@ -64,7 +64,7 @@ const LoginForm = () => {
     return (
         <>
             <InfoWrapper status={isSuccess} />
-            <form className="shadow mt-8 bg-white px-8 sm:px-20 py-12 sm:pb-24 sm:py-16 rounded-lg flex flex-col" onSubmit={formik.handleSubmit}>
+            <form className="w-full sm:w-fit shadow mt-8 bg-white px-8 sm:px-20 py-12 sm:pb-24 sm:py-16 rounded-lg flex flex-col" onSubmit={formik.handleSubmit}>
                 <div className="flex flex-col">
                     <div className="flex flex-col items-center">
                         <span className="text-yellow-400 text-3xl"><FontAwesomeIcon size="lg" icon={faBolt} /></span>
