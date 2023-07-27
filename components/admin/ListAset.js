@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenSquare } from "@fortawesome/free-solid-svg-icons";
 import Pagination from "../aset/Pagination";
+import SkeletonLoading from "../aset/SkeletonLoading";
 
 const ListAset = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -48,6 +49,10 @@ const ListAset = () => {
         }
         getAsets();
     }, [])
+
+    if(!currentData){
+        return <SkeletonLoading />
+    }
 
     return (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 overflow-y-auto w-full">

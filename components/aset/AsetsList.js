@@ -5,11 +5,16 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import Pagination from "./Pagination";
-import SkeletonLoading from "./SkeletonLoading";
+import ImageWithSkeleton from "../ImageWithSkeleton";
+import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const AsetsList = () => {
+    const [isLoading, setIsLoading] = useState(true);
+
     const [currentPage, setCurrentPage] = useState(1);
     const itemPerPage = 4;
+    const items = ['item 1', 'item 2', 'item 3', 'item 4'];
 
     const [asets, setAsets] = useState("")
     const [totalItems, setTotalItems] = useState(0)
@@ -47,29 +52,46 @@ const AsetsList = () => {
             const data = await client.request(query);
             setAsets(data.getAsets);
             setTotalItems(data.getAsets.length)
+            setIsLoading(false)
         }
         getAsets();
-    }, [])
 
-    if (!currentData) {
-        return (
-        <div>
-            <SkeletonLoading />
-            <SkeletonLoading />
-            <SkeletonLoading />
-        </div>
-        );
-    }
+    }, [])
 
     return (
             <div className="flex flex-col gap-6 my-8 overflow-y-auto">
-                {currentData &&
-                    currentData.map((aset) => {
+                {isLoading ? (
+                    <>
+                        {items.map((item, key) => {
+                            return(
+                            <div key={key} className="bg-white p-10 shadow rounded-lg flex flex-col sm:flex-row gap-6 relative overflow-hidden">
+                                <div className="hidden sm:flex overflow-hidden h-36">
+                                    <Skeleton className="w-full" height={150} width={200} />
+                                </div>
+                                <div className="sm:hidden" >
+                                    <Skeleton height={150} />
+                                </div>
+                                <div className="flex gap-2 flex-col">
+                                    <Skeleton width={250} height={30} />
+                                    <Skeleton height={30} width={100} />
+                                    <div className="mt-3 sm:mt-auto">
+                                        <Skeleton height={40} width={120} />
+                                    </div>
+                                    <div className="animate-pulse bg-stone-200 w-24 h-24 rounded-full absolute -top-8 -right-8">
+                                    </div>
+                                </div>
+                            </div>
+                            )
+                        })}
+                    </>
+                ) : (
+                    <>
+                    {currentData.map((aset) => {
                         return(
                             <div className="bg-white p-10 shadow rounded-lg flex flex-col sm:flex-row gap-6 relative overflow-hidden" key={aset.id}>
                                 <div className="flex overflow-y-hidden h-36">
                                     <Link className="w-full" href={`/aset/${aset.slug}`}>
-                                        <Image className="w-full object-center object-cover" src={aset.urlImg} width={200} height={150} alt={aset.nama} loading="lazy"/>
+                                        <Image loading="lazy" className="w-full object-center object-cover" src={aset.urlImg} width={200} height={150} alt={aset.nama}/>
                                     </Link>
                                 </div>
                                 <div className="flex gap-2 flex-col w-full">
@@ -90,7 +112,11 @@ const AsetsList = () => {
                             </div>
                         )
                     })
-                }
+                    }
+                    </>
+                
+                )}
+                
                 {totalItems <= itemPerPage ? (<></>) : (<Pagination
                     currentPage={currentPage}
                     totalPages={totalPages}

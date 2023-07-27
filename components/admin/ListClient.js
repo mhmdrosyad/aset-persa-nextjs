@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faPenSquare, faPrint, faTrashAlt, faUndo } from "@fortawesome/free-solid-svg-icons";
 import Pagination from "../aset/Pagination";
 import html2canvas from "html2canvas";
+import SkeletonLoading from "../aset/SkeletonLoading";
 
 const ListClient = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -134,6 +135,10 @@ const ListClient = () => {
         const tglNow = tanggalSekarang();
         setTanggal(tglNow);
     }, [counter])
+
+    if(!currentData){
+        return <SkeletonLoading />
+    }
 
     return (
             <div className="flex flex-col w-full">

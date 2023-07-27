@@ -90,7 +90,7 @@ const EditAsetForm = (props) => {
             const client = new GraphQLClient(endpoint);
             const data = await client.request(mutation, variabels);
             console.log('Aset deleted: ', data.deleteAset);
-            router.push("/");
+            router.push("/aset/admin/our-aset");
     }
 
     return (

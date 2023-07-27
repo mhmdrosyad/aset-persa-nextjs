@@ -13,7 +13,7 @@ const AdminHeader = () => {
         setIsMenuOpen(!isMenuOpen);
     }
     const backto = () => {
-        router.push('/');
+        router.push('/aset');
     }
     return (
         <>
