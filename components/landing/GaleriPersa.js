@@ -1,6 +1,6 @@
 const GaleriPersa = () => {
     return (
-        <div className="flex flex-col px-12 lg:px-3">
+        <div className="flex flex-col lg:px-3">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 py-8 mt-8">
                 <div className="w-full h-48 bg-gray-300"></div>
                 <div className="w-full h-48 bg-gray-300"></div>
