@@ -31,7 +31,7 @@ const CardKabid = ({ src, bidang, nama, delay }) => {
 
     return (
         <div ref={animatedElementRef} style={{ animationDelay: `${delay}ms` }} className="animated-element text-center flex flex-col py-3 items-center gap-1 opacity-0">
-                <Image src={src} alt={nama} className="p-1 border border-yellow-400 h-24 w-24 mb-2 object-cover rounded-full" height={80} width={80}/>
+                <Image src={src} alt={nama} className="hover:scale-110 ease-in-out duration-300 lg:grayscale hover:grayscale-0 p-1 border border-yellow-400 h-24 w-24 mb-2 object-cover rounded-full" height={80} width={80}/>
                 <h3 className='font-bold'>{nama}</h3>
                 <p>{bidang}</p>
         </div>

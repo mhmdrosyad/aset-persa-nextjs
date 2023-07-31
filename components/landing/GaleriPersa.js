@@ -7,7 +7,7 @@ const GaleriPersa = () => {
                 <div className="w-full h-48 bg-gray-300"></div>
                 <div className="w-full h-48 bg-gray-300"></div>
             </div>
-            <button className="ms-auto bg-yellow-400 px-8 py-3 text-neutral-900">View All</button>
+            <button className="hover:translate-y-2 hover:bg-yellow-500 duration-200 ms-auto bg-yellow-400 px-8 py-3 text-neutral-900">View All</button>
         </div>
     )
 }

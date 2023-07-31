@@ -11,7 +11,7 @@ const LandingHeader = () => {
                             <li><Link href='/aset'>ASET</Link></li>
                         </ul>
                     </div>
-                    <div className="md:bg-yellow-400 md:py-2 px-6 md:text-neutral-700">
+                    <div className="md:hover:translate-y-2 md:hover:bg-yellow-500 duration-200 md:bg-yellow-400 md:py-2 px-6 md:text-neutral-700">
                         <Link href="/">LOGIN</Link>
                     </div>
                 </div>

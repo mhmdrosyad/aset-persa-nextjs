@@ -14,17 +14,17 @@ const Intro = () => {
                     <h1 className="animate__animated animate__fadeInUpBig text-xl lg:text-3xl my-5 text-white text-center">Hi! Welcome... We Are PERSA Sambirejo.</h1>
                     <div className="my-6 flex gap-10 items-center">
                         <Link href='https://instagram.com/persa_sambirejo/' target="_blank">
-                            <Image className="h-8 w-8 md:h-fit md:w-fit" src='/instagram.svg' alt="instagram persa" width={42} height={42} />
+                            <Image className="hover:-translate-y-2 hover:brightness-125 ease-in duration-200 h-8 w-8 md:h-fit md:w-fit" src='/instagram.svg' alt="instagram persa" width={42} height={42} />
                         </Link>
                         <Link href='https://twitter.com/persa_sambirejo' target="_blank">
-                        <Image className="h-8 w-8 md:h-fit md:w-fit" src='/twitter.svg' alt="twitter persa" width={42} height={42} />
+                        <Image className="hover:-translate-y-2 hover:brightness-125 ease-in duration-200 h-8 w-8 md:h-fit md:w-fit" src='/twitter.svg' alt="twitter persa" width={42} height={42} />
 
                         </Link>
                         <Link href='/'>
-                        <Image className="h-8 w-8 md:h-fit md:w-fit" src='/tiktok.svg' alt="tiktok persa" width={48} height={48} />
+                        <Image className="hover:-translate-y-2 hover:brightness-125 ease-in duration-200 h-8 w-8 md:h-fit md:w-fit" src='/tiktok.svg' alt="tiktok persa" width={48} height={48} />
                         </Link>
                         <Link href='https://www.youtube.com/@persasambirejo5112' target="_blank">
-                        <Image className="h-8 w-8 md:h-fit md:w-fit" src='/youtube.svg' alt="youtube persa" width={51} height={36} />
+                        <Image className="hover:-translate-y-2 hover:brightness-125 ease-in duration-200 h-8 w-8 md:h-fit md:w-fit" src='/youtube.svg' alt="youtube persa" width={51} height={36} />
                         </Link>
                     </div>
                     <div className="animate-bounce text-xl lg:text-3xl text-white opacity-60">
