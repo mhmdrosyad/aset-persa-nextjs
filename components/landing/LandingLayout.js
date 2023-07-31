@@ -7,15 +7,21 @@ import KabidSection from './KabidSection'
 import VisiMisi from './VisiMisi'
 import LandingFooter from './LandingFooter'
 
+import 'animate.css';
+import AboutPersa from './AboutPersa'
+import PenasihatSection from './PenasihatSection'
+
 const LandingLayout = ({ children }) => {
     return (
-        <div className={`text-gray-600 ${montserrat.className}`}>
+        <div className={`bg-neutral-900 text-white ${montserrat.className}`}>
             <LandingHeader />
             <Intro />
             <LeaderSection />
             <KabidSection />
+            <AboutPersa />
+            <PenasihatSection />
             <VisiMisi />
-            <main className="max-w-3xl mx-auto px-3 lg:px-8">
+            <main className="max-w-7xl mx-auto px-8 lg:px-0 py-12 mb-48">
                 {children}
             </main>
             <LandingFooter />

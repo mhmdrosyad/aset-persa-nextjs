@@ -8,11 +8,11 @@ const Intro = () => {
 
     return (
         <div className="bg-intro-persa w-full sm:h-screen bg-cover bg-center lg:bg-top">
-            <div className="bg-gradient-to-t from-black to-gray-600 w-full sm:h-screen opacity-70 flex justify-center items-center">
-                <div className="flex flex-col items-center opacity-100 mt-12 px-3">
-                    <Image alt="PERSA SAMBIREJO" className="w-48 h-48 lg:w-auto lg:h-auto" src="./logo-persa.svg" width={384} height={384}></Image>
-                    <h1 className="text-xl lg:text-3xl my-5 text-white text-center">Hi! Welcome... We Are PERSA Sambirejo.</h1>
-                    <div className="my-6 flex gap-6">
+            <div className="bg-gradient-to-t from-black to-gray-700 w-full sm:h-screen opacity-70 flex justify-center items-center">
+                <div className="flex flex-col items-center opacity-100 mt-24 px-3">
+                    <Image alt="PERSA SAMBIREJO" className="animate__animated animate__bounceInDown w-48 h-48 lg:w-auto lg:h-auto" src="./logo-persa.svg" width={384} height={384}></Image>
+                    <h1 className="animate__animated animate__fadeInUpBig text-xl lg:text-3xl my-5 text-white text-center">Hi! Welcome... We Are PERSA Sambirejo.</h1>
+                    <div className="my-6 flex gap-6 items-center">
                         <Link href='/'>
                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_809_2)">
@@ -52,8 +52,22 @@ const Intro = () => {
                                 <path d="M38.4001 21.68V16C35.7401 16 33.7101 15.29 32.4001 13.91C31.0556 12.335 30.3023 10.3405 30.2701 8.27V7.86L24.9001 7.73V30.8C24.7159 31.8066 24.2273 32.7324 23.5002 33.4524C22.7732 34.1725 21.8427 34.6522 20.8344 34.8267C19.8262 35.0012 18.7886 34.8621 17.8618 34.4282C16.9351 33.9944 16.1638 33.2866 15.652 32.4005C15.1403 31.5144 14.9127 30.4926 15 29.4731C15.0874 28.4535 15.4855 27.4853 16.1405 26.6992C16.7955 25.9131 17.676 25.3468 18.6631 25.0769C19.6501 24.8071 20.6962 24.8465 21.6601 25.19V19.69C21.0981 19.5979 20.5296 19.5511 19.9601 19.55C17.9111 19.55 15.9081 20.1576 14.2044 21.296C12.5007 22.4343 11.1728 24.0524 10.3887 25.9454C9.60459 27.8384 9.39942 29.9215 9.79917 31.9311C10.1989 33.9408 11.1856 35.7868 12.6345 37.2356C14.0833 38.6845 15.9293 39.6712 17.939 40.0709C19.9486 40.4707 22.0317 40.2655 23.9247 39.4814C25.8177 38.6973 27.4358 37.3694 28.5741 35.6657C29.7125 33.962 30.3201 31.959 30.3201 29.91C30.319 29.4854 30.2923 29.0613 30.2401 28.64V19.49C32.6819 21.0149 35.5229 21.7774 38.4001 21.68Z" fill="white" fillOpacity="0.52"/>
                             </svg>
                         </Link>
+                        <Link href='/'>
+                            <svg width="51" height="36" viewBox="0 0 51 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clipPath="url(#clip0_1028_16)">
+                                <path d="M33.9724 17.4756C29.2963 14.9643 24.8189 12.6555 20.2422 10.245V24.6653C25.0583 22.0341 30.1347 19.6246 33.9923 17.4756H33.9724Z" fill="white"/>
+                                <path d="M33.9724 17.4756C29.2963 14.9643 20.2422 10.245 20.2422 10.245L32.3138 18.3989C32.3138 18.3989 30.1148 19.6246 33.9724 17.4756Z" fill="#E8E0E0"/>
+                                <path d="M21.1218 35.9535C11.4091 35.7737 8.09177 35.6121 6.05272 35.1899C4.67316 34.9094 3.47433 34.2866 2.59531 33.3832C1.91594 32.6995 1.37567 31.6564 0.956501 30.2091C0.596946 29.0034 0.456908 28.0002 0.257261 25.5498C-0.0483606 20.0194 -0.121218 15.498 0.257261 10.4459C0.569506 7.65598 0.720897 4.34404 2.79496 2.41184C3.77427 1.50754 4.9135 0.925601 6.19275 0.685027C8.19112 0.303721 16.705 0.00228882 25.5188 0.00228882C34.3128 0.00228882 42.8456 0.303721 44.8458 0.685027C46.444 0.986458 47.9427 1.8898 48.8227 3.05464C50.7151 6.04613 50.7482 9.766 50.9403 12.6757C51.0198 14.0621 51.0198 21.9345 50.9403 23.3209C50.6413 27.9194 50.401 29.5464 49.7216 31.2332C49.3015 32.2982 48.9429 32.8602 48.3222 33.483C47.3487 34.4415 46.1077 35.079 44.7645 35.3107C36.3594 35.9459 29.2222 36.0837 21.1218 35.9535ZM33.993 17.4758C29.3169 14.9645 24.8395 12.6358 20.2627 10.2253V24.6465C25.0788 22.0153 30.1561 19.6048 34.0128 17.4558L33.993 17.4758Z" fill="#CD201F"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1028_16">
+                                <rect width="51" height="36" fill="white"/>
+                                </clipPath>
+                            </defs>
+                            </svg>
+                        </Link>
                     </div>
-                    <div className="text-xl lg:text-3xl text-white opacity-60">
+                    <div className="animate-bounce text-xl lg:text-3xl text-white opacity-60">
                         <FontAwesomeIcon icon={faChevronDown} />
                     </div>
                 </div>
